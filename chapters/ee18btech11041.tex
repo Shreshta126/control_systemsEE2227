@@ -1,0 +1,104 @@
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\item In a system whose signal flow graph is shown in the figure, $U_1(s)$ and $U_2(s)$ are inputs. The transfer function $\frac{Y(s)}{U_1(s)}$ is
+
+
+\begin{figure}[!ht]
+\begin{center}
+		
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11041_image.tex}}
+	\end{center}
+	\label{fig:ee18btech11041}
+\end{figure}
+
+
+\solution 
+\begin{align}
+    \frac{Y(s)}{U_1(s)}\Biggr|_{U_2(s)=0}
+    \label{eq:ee18btech11041_1}
+\end{align}
+
+Using Matrix Formula:
+\newline
+The transition equations are
+\begin{align}
+    N_1 = U_1-RN_3-k_2N_6
+    \label{eq:ee18btech11041_2}
+\end{align}
+\begin{align}
+    N_2=\frac{N_1}{L}
+    \label{eq:ee18btech11041_4}
+\end{align}
+\begin{align}
+    N_3=\frac{N_2}{s}
+    \label{eq:ee18btech11041_5}
+\end{align}
+\begin{align}
+    N_4=k_1N_3
+    \label{eq:ee18btech11041_6}
+\end{align}
+\begin{align}
+    N_5=\frac{N_4}{J}
+    \label{eq:ee18btech11041_7}
+\end{align}
+\begin{align}
+    N_6=\frac{N_5}{s}
+    \label{eq:ee18btech11041_8}
+\end{align}
+State Transition Matrix :
+\begin{align}
+    \Vec{T} = \myvec{0 & 0 & -R & 0 & 0 & -k_2\\
+    \frac{1}{L} & 0 & 0 & 0 & 0 & 0\\
+    0 & \frac{1}{s} & 0 & 0 & 0 & 0\\
+    0 & 0 & k_1 & 0 & 0 & 0\\
+    0 & 0 & 0 & \frac{1}{J} & 0 & 0\\
+    0 & 0 & 0 & 0 & \frac{1}{s} & 0}
+    \label{eq:ee18btech11041_9}
+\end{align}    
+
+\begin{align}
+    \Vec{U} = {(\Vec{I}-\Vec{T})^-}^1
+    \label{eq:ee18btech11041_10}
+\end{align}
+
+\begin{align}
+    (\Vec{I}-\Vec{T}) = \myvec{1 & 0 & R & 0 & 0 & k_2\\
+    \frac{-1}{L} & 1 & 0 & 0 & 0 & 0\\
+    0 & \frac{-1}{s} & 1 & 0 & 0 & 0\\
+    0 & 0 & -k_2 & 1 & 0 & 0\\
+    0 & 0 & 0 & \frac{-1}{J} & 1 & 0\\
+    0 & 0 & 0 & 0& \frac{-1}{s} & 1 }
+    \label{eq:ee18btech11041_10}
+\end{align}
+
+${U_5}_0$ will be the gain of the system
+
+\begin{align}
+    \Vec{{U_5}_0} = \frac{\mydet{\frac{-1}{L} & 1 & 0 & 0 & 0 \\
+    0 & \frac{-1}{s} & 1 & 0 & 0 \\
+    0 & 0 & -k_2 & 1 & 0 \\
+    0 & 0 & 0 & \frac{-1}{J} & 1 \\
+    0 & 0 & 0 & 0& \frac{-1}{s} }}{ \myvec{1 & 0 & R & 0 & 0 & k_2\\
+    \frac{-1}{L} & 1 & 0 & 0 & 0 & 0\\
+    0 & \frac{-1}{s} & 1 & 0 & 0 & 0\\
+    0 & 0 & -k_2 & 1 & 0 & 0\\
+    0 & 0 & 0 & \frac{-1}{J} & 1 & 0\\
+    0 & 0 & 0 & 0& \frac{-1}{s} & 1 }}
+    \label{eq:ee18btech11041_11}
+\end{align}
+
+After simplifying the above expression, transfer function obtained is:
+
+\begin{align}
+    \frac{Y(s)}{U_1(s)}=\frac{k_1}{s^2LJ+sRJ+k_1k_2}
+    \label{eq:ee18btech11041_12}
+\end{align}
+
+The following code generates the transfer function:
+\begin{lstlisting}
+codes/ee18btech11041/transfer_function.py
+\end{lstlisting}
+
+
+
+\end{enumerate}
