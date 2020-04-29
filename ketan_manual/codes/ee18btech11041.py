@@ -10,7 +10,7 @@ import shlex
 
 s = control.TransferFunction.s
 GH=41*(s+4)/(s**2*(s+3))   #open looop transfer function G(s)H(s)
-t=41/(s**3+3*s**2+41*s+164)
+
 
 plt.figure(1)  # nyquist plot
 control.nyquist(GH)   
