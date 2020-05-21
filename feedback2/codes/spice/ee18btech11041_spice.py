@@ -25,9 +25,9 @@ plt.grid()
 
 
 #if using termux
-plt.savefig('./figs/H1.pdf')
-plt.savefig('./figs/H1.eps')
-subprocess.run(shlex.split("termux-open ./figs/H1.pdf"))
+plt.savefig('./figs/H.pdf')
+plt.savefig('./figs/H.eps')
+subprocess.run(shlex.split("termux-open ./figs/H.pdf"))
 #else
 
 #plot of G
@@ -41,9 +41,9 @@ plt.grid()
 
 
 #if using termux
-plt.savefig('./figs/G1.pdf')
-plt.savefig('./figs/G1.eps')
-subprocess.run(shlex.split("termux-open ./figs/G1.pdf"))
+plt.savefig('./figs/G.pdf')
+plt.savefig('./figs/G.eps')
+subprocess.run(shlex.split("termux-open ./figs/G.pdf"))
 #else
 
 #plot of T
@@ -58,9 +58,9 @@ plt.grid()
 
 
 #if using termux
-plt.savefig('./figs/T1.pdf')
-plt.savefig('./figs/T1.eps')
-subprocess.run(shlex.split("termux-open ./figs/T1.pdf"))
+plt.savefig('./figs/T.pdf')
+plt.savefig('./figs/T.eps')
+subprocess.run(shlex.split("termux-open ./figs/T.pdf"))
 #else
 
 #plt.show()
