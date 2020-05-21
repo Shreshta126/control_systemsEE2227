@@ -8,11 +8,11 @@ import subprocess
 import shlex
 #end if
 
-data=np.loadtxt('plotdata.data')  
+data=np.loadtxt('plotdata.dat')  
 
-data2=np.loadtxt('plotdata2.data')  
+data2=np.loadtxt('plotdata2.dat')  
 
-data3=np.loadtxt('plotdata3.data')  
+data3=np.loadtxt('plotdata3.dat')  
 
 
 plt.figure(1)
