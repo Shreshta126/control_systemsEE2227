@@ -12,9 +12,9 @@ G1 0 vs N001 vs 1m
 .control
 run
 
-wrdata plotdata V(vf)/  ((V(vg) - V(vs))*0.001-(V(vs)/50k) ) 
-wrdata plotdata2 ((V(vg) - V(vs))*0.001-(V(vs)/50k) )/ (V(vid)-V(vf)) 
-wrdata plotdata3 ((V(vg) - V(vs))*0.001-(V(vs)/50k) )/ (V(vid)) 
+wrdata plotdata.dat V(vf)/  ((V(vg) - V(vs))*0.001-(V(vs)/50k) ) 
+wrdata plotdata2.dat ((V(vg) - V(vs))*0.001-(V(vs)/50k) )/ (V(vid)-V(vf)) 
+wrdata plotdata3.dat ((V(vg) - V(vs))*0.001-(V(vs)/50k) )/ (V(vid)) 
 
 .endc 
 .end
